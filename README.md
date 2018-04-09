@@ -1,21 +1,15 @@
 # Portal
 
-**TODO: Add description**
+Repo with code written by following the instructions on [how i start](http://howistart.org/posts/elixir/1/), and expanding on its ideas (also using the more updated version of `:simple_one_for_one` in `DynamicSupervisor)
 
-## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `portal` to your list of dependencies in `mix.exs`:
+## Usage
 
 ```elixir
-def deps do
-  [
-    {:portal, "~> 0.1.0"}
-  ]
-end
+Portal.shoot(:red)
+Portal.shoot(:blue)
+portal = Portal.transfer(:red, :blue, [1,2,3,4])
+Portal.push_left(portal)
+Portal.push_right(portal)
+portal
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/portal](https://hexdocs.pm/portal).
-
